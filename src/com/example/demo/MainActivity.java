@@ -1,5 +1,7 @@
 package com.example.demo;
 
+import com.news.chajian.R;
+
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,26 +27,26 @@ public class MainActivity extends Activity {
 		btn = new Button(this);
 		wm = (WindowManager) getSystemService(WINDOW_SERVICE);
 		params = new WindowManager.LayoutParams();
-		// ÉèÖÃwindow type
+		// ï¿½ï¿½ï¿½ï¿½window type
 		params.type = WindowManager.LayoutParams.TYPE_SYSTEM_ALERT;
 		/*
-		 * Èç¹ûÉèÖÃÎªparams.type = WindowManager.LayoutParams.TYPE_PHONE; ÄÇÃ´ÓÅÏÈ¼¶»á½µµÍÒ»Ð©,
-		 * ¼´À­ÏÂÍ¨ÖªÀ¸²»¿É¼û
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªparams.type = WindowManager.LayoutParams.TYPE_PHONE; ï¿½ï¿½Ã´ï¿½ï¿½ï¿½È¼ï¿½ï¿½á½µï¿½ï¿½Ò»Ð©,
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨Öªï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½
 		 */
-		params.format = PixelFormat.RGBA_8888; // ÉèÖÃÍ¼Æ¬¸ñÊ½£¬Ð§¹ûÎª±³¾°Í¸Ã÷
-		// ÉèÖÃWindow flag
+		params.format = PixelFormat.RGBA_8888; // ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ê½ï¿½ï¿½Ð§ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Í¸ï¿½ï¿½
+		// ï¿½ï¿½ï¿½ï¿½Window flag
 		params.flags = WindowManager.LayoutParams.FLAG_NOT_TOUCH_MODAL
 				| WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 		/*
-		 * ÏÂÃæµÄflagsÊôÐÔµÄÐ§¹ûÐÎÍ¬¡°Ëø¶¨¡±¡£ Ðü¸¡´°²»¿É´¥Ãþ£¬²»½ÓÊÜÈÎºÎÊÂ¼þ,Í¬Ê±²»Ó°ÏìºóÃæµÄÊÂ¼þÏìÓ¦¡£
+		 * ï¿½ï¿½ï¿½ï¿½ï¿½flagsï¿½ï¿½ï¿½Ôµï¿½Ð§ï¿½ï¿½ï¿½ï¿½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½É´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½Â¼ï¿½,Í¬Ê±ï¿½ï¿½Ó°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½
 		 * wmParams.flags=LayoutParams.FLAG_NOT_TOUCH_MODAL |
 		 * LayoutParams.FLAG_NOT_FOCUSABLE | LayoutParams.FLAG_NOT_TOUCHABLE;
 		 */
 
-		// ÉèÖÃÐü¸¡´°µÄ³¤µÃ¿í
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä³ï¿½ï¿½Ã¿ï¿½
 		params.width = 100;
 		params.height = 100;
-		// ÉèÖÃÐü¸¡´°µÄTouch¼àÌý
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Touchï¿½ï¿½ï¿½ï¿½
 		btn.setOnTouchListener(new OnTouchListener() {
 			int lastX, lastY;
 			int paramX, paramY;
@@ -62,7 +64,7 @@ public class MainActivity extends Activity {
 					int dy = (int) event.getRawY() - lastY;
 					params.x = paramX + dx;
 					params.y = paramY + dy;
-					// ¸üÐÂÐü¸¡´°Î»ÖÃ
+					// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î»ï¿½ï¿½
 					wm.updateViewLayout(btn, params);
 					break;
 				}
